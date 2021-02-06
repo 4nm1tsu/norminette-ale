@@ -20,4 +20,4 @@ let g:ale_linters['cpp'] = ['norminette']
 ```
 
 ## Enjoy coding!
-[Screenshot](./pictures/Screenshot_20210207_045656.png)
+![Screenshot](./pictures/Screenshot_20210207_045656.png)
