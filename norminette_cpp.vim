@@ -16,11 +16,9 @@ endfunction
 
 
 function! ale_linters#cpp#norminette#Opscript(buffer, lines) abort
-    " Look for lines like the following.
-    "
-    " hoge.c: KO!
-    "	SPACE_BEFORE_FUNC    (line:   3, col:   4):     space before function name
-	let l:pattern = '\v^\t*(([a-zA-Z]|_|\.)+)(\ *\(line:\ *(\d+),\ *col:\ *(\d+)\))?:\t*(.+)$'
+    "	Error: SPACE_REPLACE_TAB    (line:  17, col:  11):      Found space when expecting tab
+
+    let l:pattern = '\v^Error: *(([a-zA-Z]|_|\.)+)(\ *\(line:\ *(\d+),\ *col:\ *(\d+)\))?:\t*(.+)$'
     let l:output = []
 	let l:curr_file = ''
 	let l:lel = ale#util#GetMatches(a:lines, l:pattern)
